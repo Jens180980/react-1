@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>HTML Template til React - Jens</title>
+  </head>
+  <body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+      const favoriteFoods = ['lasagne', 'pizza', 'stegt red snapper', 'nacatamales', 'stegt flæsk']
+
+      const RenderFoods = () => {
+        return (<ul>
+          {favoriteFoods.map((foods, index) => {
+            return <li key={index}>{foods}</li>
+          })}
+        </ul>
+      )
+      }
+
+      const App = () => {
+        return <RenderFoods />
+      }
+
+ReactDOM.render(
+        <App />,
+        document.getElementById('root')
+      )
+
+    </script>
+
+  </body>
+</html>
