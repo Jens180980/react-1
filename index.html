@@ -12,120 +12,22 @@
 
     <script type="text/babel">
 
-      const Task1 = () => {
-        return (
-          <h2>Bagepulver</h2>
-        )
-      }
+    const Greeting = (props) => {
+      return (
+          <p>En stor hilsen til {props.name}</p>
+      )
+    }
 
-      const Task2 = () => {
-        return (
-          <p>10 x 10 er lig med {10*10}</p>
-        )
-      }
+    const Render = () => {
+      return (
+        <Greeting name="Pedro" />
+      )
 
-      const Task3 = () => {
-        return (
-          <ul>
-            <li>1. Lasagne</li>
-            <li>2. Pizza</li>
-            <li>3. Stegt Red Snapper</li>
-            <li>4. Nacatamales</li>
-            <li>5. Stegt flæsk</li>
-          </ul>
-        )
-      }
+    }
 
-      const Task4 = () => {
-        return (
-          <section>
-            <article>
-              <h3>Paragraph one</h3>
-              <p>Aids! You don't have to try to impress me Morty. Really, you're gonna pull that move? I guided your entire civilisation. Your people have a holiday named ricksgiving. They teach kids about me in school. Aw, geez.</p>
-            </article>
-            <article>
-              <h3>Paragraph two</h3>
-              <p>You’re like Hitler, but even Hitler cared about Germany or something. I wanna be alive, I am alive! Alive i tell you. Mother, I love you. Those are no longer just words. I wanna hold you. I wanna run in a stream. I wanna taste ice cream, but not just put it in my mouth and let it slide down my throat, but really eat it!</p>
-            </article>
-          </section>
-        )
+      const App = () => {
+        return <Render />
       }
-
-      const Task5 = () => {
-        return (
-          <>
-            <article>
-              <h3>Paragraph one</h3>
-              <p>You know what a vole is, Morty? You know what a vole is? You don't know me! I dunno, some people would pay top dollar for that kind of breakthrough. Me irresponsible? All I wanted was for you to hand me a screwdriver!</p>
-            </article>
-            <article>
-              <h3>Paragraph two</h3>
-              <p>You're really gonna try to take the high road on this one? Y'know your-you're a little creep, Morty! Your-your-your-you're just a little creepy creep person!</p>
-            </article>
-          </>
-        )
-      }
-
-      const Task6 = () => {
-        return (
-          <input type="date"/>
-        )
-      }
-
-      const Task7 = () => {
-        return (
-          <section className="mainwrapper">
-            <h3>I'm in a mainwrapper!</h3>
-          </section>
-        )
-      }
-
-      const Task8 = () => {
-        let currentTime = new Date()
-        if(currentTime.getHours < 12) {
-          return <p>Godmorgen</p>
-        } else {
-          return <p>Goddag</p>
-        }
-      }
-
-      const Task9 = () => {
-        let currentTime = new Date()
-        return <p> {currentTime.getHours < 12 ? 'Godmorgen' : 'Goddag'}</p>
-      }
-
-      const Task10 = () => {
-        return (
-        <>
-          <Task1 />
-          <Task2 />
-          <Task3 />
-          <Task4 />
-          <Task5 />
-          <Task6 />
-          <Task7 />
-          <Task8 />
-          <Task9 />
-        </>
-        )
-      }
-
-const App = () => {
-  return (
-  <>
-    <Task1 />
-    <Task2 />
-    <Task3 />
-    <Task4 />
-    <Task5 />
-    <Task6 />
-    <Task7 />
-    <Task8 />
-    <Task9 />
-    <Task10 />
-  </>
-  )
-}
 
 ReactDOM.render(
         <App />,
